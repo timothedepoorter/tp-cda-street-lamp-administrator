@@ -1,3 +1,4 @@
+using lampadaire.Interface;
 using lampadaire.Models;
 using lampadaire.Service;
 using Microsoft.AspNetCore.Http;

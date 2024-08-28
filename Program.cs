@@ -1,3 +1,4 @@
+using lampadaire.Interface;
 using lampadaire.Models;
 using lampadaire.MongoDBConnection;
 using lampadaire.Service;
@@ -12,6 +13,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<ILampadaireService, LampadaireService>();
+builder.Services.AddScoped<ICapteurService, CapteurService>();
 
 builder.Services.Configure<MongoDbSetting>(
     builder.Configuration.GetSection("MongoDbSettings"));

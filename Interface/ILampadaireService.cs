@@ -1,6 +1,6 @@
 using lampadaire.Models;
 
-namespace lampadaire.Service
+namespace lampadaire.Interface
 {
     public interface ILampadaireService
     {

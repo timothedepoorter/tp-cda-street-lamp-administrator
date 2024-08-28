@@ -1,3 +1,4 @@
+using lampadaire.Interface;
 using lampadaire.Models;
 using lampadaire.MongoDBConnection;
 using Microsoft.Extensions.Options;
