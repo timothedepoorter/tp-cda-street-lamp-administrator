@@ -1,0 +1,6 @@
+@lampadaire_HostAddress = http://localhost:5207
+
+GET {{lampadaire_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
