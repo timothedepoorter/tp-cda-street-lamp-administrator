@@ -9,9 +9,15 @@ namespace lampadaire.Models
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public int Id { get; set; }
+        public string Id { get; set; }
 
-        public int Identifiant { get; set; }
+        [BsonElement("identifiant")]
+        public string Identifiant { get; set; }
+
+        [BsonElement("motDePasse")]
         public string MotDePasse { get; set; }
+
+        [BsonElement("role")]
+        public string Role { get; set; } = "user";  
     }
 }
