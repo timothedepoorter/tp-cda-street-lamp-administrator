@@ -30,5 +30,25 @@ namespace lampadaire.Service
 
             return await _lampadaireCollection.Find(lampadaire => lampadaire.Id == id).FirstOrDefaultAsync();
         }
+
+        public async Task<Lampadaire> CreateLampadaireAsync(Lampadaire lampadaire)
+        {
+            await _lampadaireCollection.InsertOneAsync(lampadaire);
+            return lampadaire;
+        }
+
+        public async Task<bool> UpdateLampadaireAsync(string id, Lampadaire lampadaireIn)
+        {
+            if (!ObjectId.TryParse(id, out var objectId))
+            {
+                return false;
+            }
+
+            var updateResult = await _lampadaireCollection.ReplaceOneAsync(
+                lampadaire => lampadaire.Id == id,
+                lampadaireIn);
+
+            return updateResult.IsAcknowledged && updateResult.ModifiedCount > 0;
+        }
     }
 }

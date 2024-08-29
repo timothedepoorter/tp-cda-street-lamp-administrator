@@ -6,5 +6,7 @@ namespace lampadaire.Interface
     {
         Task<List<Lampadaire>> GetAllLampadairesAsync();
         Task<Lampadaire> GetLampadaireByIdAsync(string id);
+        Task<Lampadaire> CreateLampadaireAsync(Lampadaire lampadaire);
+        Task<bool> UpdateLampadaireAsync(string id, Lampadaire lampadaireIn);
     }
 }
