@@ -21,15 +21,15 @@ namespace lampadaire.Controller
             return Ok(capteurs);
         }
 
-        // [HttpGet("{id}")]
-        // public async Task<IActionResult> GetCapteurById(string id)
-        // {
-        //     var capteur = await _capteurService.GetCapteurByIdAsync(id);
-        //     if (capteur == null)
-        //     {
-        //         return NotFound();
-        //     }
-        //     return Ok(capteur);
-        // }
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetCapteurById(string id)
+         {
+             var capteur = await _capteurService.GetCapteurByIdAsync(id);
+             if (capteur == null)
+             {
+                 return NotFound();
+            }
+            return Ok(capteur);
+         }
     }
 }

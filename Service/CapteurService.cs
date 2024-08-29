@@ -21,14 +21,14 @@ namespace lampadaire.Service
             return await _capteurCollection.Find(capteur => true).ToListAsync();
         }
 
-        // public async Task<Capteur> GetCapteurByIdAsync(string id)
-        // {
-        //     if (!ObjectId.TryParse(id, out var objectId))
-        //     {
-        //         return null;
-        //     }
-        //
-        //     return await _capteurCollection.Find(capteur => capteur.Id == id).FirstOrDefaultAsync();
-        // }
+         public async Task<Capteur> GetCapteurByIdAsync(string id)
+         {
+             if (!ObjectId.TryParse(id, out var objectId))
+             {
+                 return null;
+            }
+        
+            return await _capteurCollection.Find(capteur => capteur.Id == id).FirstOrDefaultAsync();
+         }
     }
 }

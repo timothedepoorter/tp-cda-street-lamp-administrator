@@ -5,6 +5,6 @@ namespace lampadaire.Interface
     public interface ICapteurService
     {
         Task<List<Capteur>> GetAllCapteursAsync();
-        // Task<Capteur> GetCapteurByIdAsync(string id);
+         Task<Capteur> GetCapteurByIdAsync(string id);
     }
 }
