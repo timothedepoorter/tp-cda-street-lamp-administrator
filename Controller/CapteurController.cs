@@ -1,9 +1,11 @@
 using lampadaire.Interface;
+using lampadaire.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace lampadaire.Controller
-{[Route("api/[controller]")]
+{
+    [Route("api/[controller]")]
     [ApiController]
     public class CapteurController : ControllerBase
     {
@@ -21,15 +23,44 @@ namespace lampadaire.Controller
             return Ok(capteurs);
         }
 
-        // [HttpGet("{id}")]
-        // public async Task<IActionResult> GetCapteurById(string id)
-        // {
-        //     var capteur = await _capteurService.GetCapteurByIdAsync(id);
-        //     if (capteur == null)
-        //     {
-        //         return NotFound();
-        //     }
-        //     return Ok(capteur);
-        // }
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetCapteurById(string id)
+        {
+            var capteur = await _capteurService.GetCapteurByIdAsync(id);
+            if (capteur == null)
+            {
+                return NotFound();
+            }
+            return Ok(capteur);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> PostCapteur([FromBody] Capteur capteur)
+        {
+            if (capteur == null)
+            {
+                return BadRequest("Capteur is null.");
+            }
+
+            var createdCapteur = await _capteurService.CreateCapteurAsync(capteur);
+            return CreatedAtAction(nameof(GetCapteurById), new { id = createdCapteur.Id }, createdCapteur);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutCapteur(string id, [FromBody] Capteur capteur)
+        {
+            if (capteur == null || id != capteur.Id)
+            {
+                return BadRequest("Capteur ID mismatch.");
+            }
+
+            var updated = await _capteurService.UpdateCapteurAsync(id, capteur);
+            if (!updated)
+            {
+                return NotFound();
+            }
+
+            return NoContent();
+        }
     }
 }
