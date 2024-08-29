@@ -3,15 +3,28 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace lampadaire.Models
 {
-        public class Horaire
-        {
-            [BsonId]
-            [BsonRepresentation(BsonType.ObjectId)]
-            public ObjectId Id { get; set; }
+    public class Horaire
+    {
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string Id { get; set; }
 
-            public string Saison { get; set; }
-            public TimeSpan HeureDebut { get; set; }
-            public TimeSpan HeureFin { get; set; }
-            public TimeSpan DureeEclairage { get; set; }
-        }
+        [BsonElement("id")]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string InternalId { get; set; }
+
+        [BsonElement("saison")]
+        public string Saison { get; set; }
+
+        [BsonElement("heureDebut")]
+        [BsonRepresentation(BsonType.DateTime)]
+        public DateTime HeureDebut { get; set; }
+
+        [BsonElement("heureFin")]
+        [BsonRepresentation(BsonType.DateTime)]
+        public DateTime HeureFin { get; set; }
+
+        [BsonElement("dureeEclairage")]
+        public int DureeEclairage { get; set; }
+    }
 }

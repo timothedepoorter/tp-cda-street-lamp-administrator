@@ -18,6 +18,7 @@ builder.Services.AddSwaggerGen();
 // Register services and database connections
 builder.Services.AddScoped<ILampadaireService, LampadaireService>();
 builder.Services.AddScoped<ICapteurService, CapteurService>();
+builder.Services.AddScoped<IHoraireService, HoraireService>();
 builder.Services.AddScoped<AuthService>();
 
 builder.Services.Configure<MongoDbSetting>(
