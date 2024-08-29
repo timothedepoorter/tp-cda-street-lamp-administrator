@@ -239,3 +239,12 @@
 /Users/Fares/Desktop/Dev/lampadaire/obj/Debug/net8.0/lampadaire.pdb
 /Users/Fares/Desktop/Dev/lampadaire/obj/Debug/net8.0/lampadaire.genruntimeconfig.cache
 /Users/Fares/Desktop/Dev/lampadaire/obj/Debug/net8.0/ref/lampadaire.dll
+/Users/Fares/Desktop/Dev/lampadaire/bin/Debug/net8.0/BCrypt.Net-Next.dll
+/Users/Fares/Desktop/Dev/lampadaire/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/Fares/Desktop/Dev/lampadaire/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/Fares/Desktop/Dev/lampadaire/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/Fares/Desktop/Dev/lampadaire/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/Users/Fares/Desktop/Dev/lampadaire/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+/Users/Fares/Desktop/Dev/lampadaire/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/Fares/Desktop/Dev/lampadaire/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+/Users/Fares/Desktop/Dev/lampadaire/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
