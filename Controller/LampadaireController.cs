@@ -34,5 +34,34 @@ namespace lampadaire.Controller
             }
             return Ok(lampadaire);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> PostLampadaire([FromBody] Lampadaire lampadaire)
+        {
+            if (lampadaire == null)
+            {
+                return BadRequest("Lampadaire est null.");
+            }
+
+            var createdLampadaire = await _lampadaireService.CreateLampadaireAsync(lampadaire);
+            return CreatedAtAction(nameof(GetLampadaireById), new { id = createdLampadaire.Id }, createdLampadaire);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutLampadaire(string id, [FromBody] Lampadaire lampadaire)
+        {
+            if (lampadaire == null || id != lampadaire.Id)
+            {
+                return BadRequest("Lampadaire id non valid");
+            }
+
+            var updated = await _lampadaireService.UpdateLampadaireAsync(id, lampadaire);
+            if (!updated)
+            {
+                return NotFound();
+            }
+
+            return NoContent();
+        }
     }
 }
