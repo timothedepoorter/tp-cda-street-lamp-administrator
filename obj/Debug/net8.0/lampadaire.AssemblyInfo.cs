@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("lampadaire")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+16fee2a892eb08b953f99ed87845a42454e270a3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+90961fc749da7ea30af216d1394890ce41fb1448")]
 [assembly: System.Reflection.AssemblyProductAttribute("lampadaire")]
 [assembly: System.Reflection.AssemblyTitleAttribute("lampadaire")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
