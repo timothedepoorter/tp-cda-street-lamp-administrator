@@ -35,16 +35,6 @@ namespace lampadaire.Controller
             return Ok(horaire);
         }
 
-        [HttpGet("internal/{internalId}")]
-        public async Task<IActionResult> GetByInternalId(string internalId)
-        {
-            var horaire = await _horaireService.GetByInternalIdAsync(internalId);
-            if (horaire == null)
-            {
-                return NotFound();
-            }
-            return Ok(horaire);
-        }
 
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] Horaire horaire)

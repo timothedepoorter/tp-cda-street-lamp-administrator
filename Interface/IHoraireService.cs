@@ -8,7 +8,6 @@ namespace lampadaire.Interface
     {
         Task<IEnumerable<Horaire>> GetAllAsync();
         Task<Horaire> GetByIdAsync(string id);
-        Task<Horaire> GetByInternalIdAsync(string internalId);
         Task<Horaire> CreateAsync(Horaire horaire);
         Task<bool> UpdateAsync(string id, Horaire horaireIn);
         Task<bool> DeleteAsync(string id);

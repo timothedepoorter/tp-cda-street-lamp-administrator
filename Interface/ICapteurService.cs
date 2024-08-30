@@ -10,5 +10,6 @@ namespace lampadaire.Interface
         Task<Capteur> GetCapteurByIdAsync(string id);
         Task<Capteur> CreateCapteurAsync(Capteur capteur);
         Task<bool> UpdateCapteurAsync(string id, Capteur capteurIn);
+        Task<bool> DeleteAsync(string id);
     }
 }

@@ -50,5 +50,16 @@ namespace lampadaire.Service
 
             return updateResult.IsAcknowledged && updateResult.ModifiedCount > 0;
         }
+        
+        public async Task<bool> DeleteAsync(string id)
+        {
+            if (!ObjectId.TryParse(id, out var objectId))
+            {
+                return false;
+            }
+
+            var deleteResult = await _lampadaireCollection.DeleteOneAsync(h => h.Id == id);
+            return deleteResult.IsAcknowledged && deleteResult.DeletedCount > 0;
+        }
     }
 }

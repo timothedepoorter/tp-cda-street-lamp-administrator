@@ -32,11 +32,7 @@ namespace lampadaire.Service
 
             return await _horaireCollection.Find(h => h.Id == id).FirstOrDefaultAsync();
         }
-
-        public async Task<Horaire> GetByInternalIdAsync(string internalId)
-        {
-            return await _horaireCollection.Find(h => h.InternalId == internalId).FirstOrDefaultAsync();
-        }
+        
 
         public async Task<Horaire> CreateAsync(Horaire horaire)
         {
