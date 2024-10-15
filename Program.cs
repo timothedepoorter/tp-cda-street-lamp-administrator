@@ -56,7 +56,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowSpecificOrigin",
         builder => builder
-            .WithOrigins("http://localhost:5173")
+            .WithOrigins("https://frontend:5173")
             .AllowAnyMethod()
             .AllowAnyHeader());
 });
@@ -92,7 +92,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseCors("AllowSpecificOrigin");
 
-app.UseHttpsRedirection();
+// app.UseHttpsRedirection();
 
 // Add Authentication and Authorization middlewares
 app.UseAuthentication();
