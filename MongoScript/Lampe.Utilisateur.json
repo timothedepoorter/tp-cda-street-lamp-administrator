@@ -1,0 +1,46 @@
+[{
+  "_id": {
+    "$oid": "66ceeda1e13a620644f9c7b9"
+  },
+  "id": {
+    "$oid": "64f0a6b1e4b0f1a1d8b9e3d1"
+  },
+  "identifiant": "admin",
+  "motDePasse": "hashed_admin_password"
+},
+{
+  "_id": {
+    "$oid": "66ceeda1e13a620644f9c7ba"
+  },
+  "id": {
+    "$oid": "64f0a6b1e4b0f1a1d8b9e3d2"
+  },
+  "identifiant": "user1",
+  "motDePasse": "hashed_user1_password"
+},
+{
+  "_id": {
+    "$oid": "66ceeda1e13a620644f9c7bb"
+  },
+  "id": {
+    "$oid": "64f0a6b1e4b0f1a1d8b9e3d3"
+  },
+  "identifiant": "user2",
+  "motDePasse": "hashed_user2_password"
+},
+{
+  "_id": {
+    "$oid": "66d065f3bf4a480e2dadb899"
+  },
+  "id": null,
+  "identifiant": "test",
+  "motDePasse": "$2a$11$64EPxPFCa.0lyBdd0udEg.6/s19nSTG/qPGBAqpHcPliqNKXpe20y"
+},
+{
+  "_id": {
+    "$oid": "66d06ce9b014ba23ea750afb"
+  },
+  "identifiant": "super",
+  "motDePasse": "$2a$11$Bfzzchc9bsaEU19N/2Ew/.EkdQUEBKk67Zt2JZCGsWOyT6Igow2/C",
+  "role": "user"
+}]

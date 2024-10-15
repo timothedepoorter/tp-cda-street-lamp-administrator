@@ -1,0 +1,33 @@
+﻿services:
+  app:
+    container_name: backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      DATABASE_URI: mongodb://mongodb:27017/lampadaire
+    ports:
+      - '7108:7108'
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:latest
+    container_name: mongodb
+    restart: always
+    ports:
+      - '27018:27017'
+    volumes:
+      - mongodbdata:/data/db
+
+  mongo-seed:
+    build:
+      context: ./MongoScript
+      dockerfile: Dockerfile
+      args:
+        - DATABASE_URI=mongodb://mongodb:27017/lampadaire
+    depends_on:
+      - mongo
+
+volumes:
+  mongodbdata:

@@ -1,0 +1,91 @@
+[{
+  "_id": {
+    "$oid": "66ceeda5e13a620644f9c7bc"
+  },
+  "id": {
+    "$oid": "64f0a6b1e4b0f1a1d8b9e3d4"
+  },
+  "numIdentite": "sensor001",
+  "type": "pieton",
+  "isActif": true,
+  "isDetecting": true,
+  "isKO": false
+},
+{
+  "_id": {
+    "$oid": "66ceeda5e13a620644f9c7bd"
+  },
+  "id": {
+    "$oid": "64f0a6b1e4b0f1a1d8b9e3d5"
+  },
+  "numIdentite": "sensor002",
+  "type": "vehicule",
+  "isActif": true,
+  "isDetecting": false,
+  "isKO": false
+},
+{
+  "_id": {
+    "$oid": "66ceeda5e13a620644f9c7be"
+  },
+  "id": {
+    "$oid": "64f0a6b1e4b0f1a1d8b9e3d6"
+  },
+  "numIdentite": "sensor003",
+  "type": "meteo",
+  "isActif": false,
+  "isDetecting": false,
+  "isKO": true
+},
+{
+  "_id": {
+    "$oid": "66ceeda5e13a620644f9c7c1"
+  },
+  "id": {
+    "$oid": "64f0a6b1e4b0f1a1d8b9e3d7"
+  },
+  "numIdentite": "sensor004",
+  "type": "pieton",
+  "isActif": true,
+  "isDetecting": true,
+  "isKO": false
+},
+{
+  "_id": {
+    "$oid": "66ceeda5e13a620644f9c7c2"
+  },
+  "id": {
+    "$oid": "64f0a6b1e4b0f1a1d8b9e3d8"
+  },
+  "numIdentite": "sensor005",
+  "type": "vehicule",
+  "isActif": false,
+  "isDetecting": false,
+  "isKO": true
+},
+{
+  "_id": {
+    "$oid": "66ceeda5e13a620644f9c7c3"
+  },
+  "id": {
+    "$oid": "64f0a6b1e4b0f1a1d8b9e3d9"
+  },
+  "numIdentite": "sensor006",
+  "type": "meteo",
+  "isActif": true,
+  "isDetecting": false,
+  "isKO": false
+},
+{
+  "_id": {
+    "$oid": "66ceeda5e13a620644f9c7c4"
+  },
+  "id": {
+    "$oid": "64f0a6b1e4b0f1a1d8b9e3d0"
+  },
+  "numIdentite": "sensor007",
+  "type": "pieton",
+  "isActif": true,
+  "isDetecting": false,
+  "isKO": false
+}]
